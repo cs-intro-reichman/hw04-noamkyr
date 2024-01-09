@@ -23,11 +23,14 @@ public class StringOps {
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
         //System.out.println(camelCase(" Intro to coMPUter sCIEncE "));
-        int [] a = allIndexOf("Hello World",'l');
+        int [] a = allIndexOf("Hello WoRld",'l');
 
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
         }
+
+
+        System.out.println(camelCase("One   two tHRee world"));
 
 
     }
@@ -64,16 +67,18 @@ public class StringOps {
 
                 if (i == 0 || string.charAt(i-1) == ' '){
                     count_word ++;
+                    if (current >= 'a' && current <= 'z'){
+                        current -= 32;
+                    }
+
+                } else {
+
                     if (count_word == 1){
                         if (current >= 'A' && current <= 'Z'){
                             current += 32;
                         }
-                    } else {
-                        if (current >= 'a' && current <= 'z'){
-                            current -= 32;
-                        }
                     }
-                } else {
+
                     if (current >= 'A' && current <= 'Z'){
                         current += 32;
                     }
