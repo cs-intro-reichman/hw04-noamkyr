@@ -1,13 +1,13 @@
 public class ArrayOps {
     public static void main(String[] args) {
         int[] arr2 = new int[] {7, 5, 4, 3, -12};
-        int[] arr1 = new int[]{1, 2, 2, 1};
+        int[] arr1 = new int[]{2,8,3,7,8};
 
         //System.out.println(findMissingInt(intArray));
-        //System.out.println(secondMaxValue(intArray));
+        System.out.println(secondMaxValue(arr1));
 
         // System.out.println(containsTheSameElements(arr1, arr2));
-        System.out.println(isSorted(arr2));
+        //System.out.println(isSorted(arr2));
 
     }
     
@@ -34,7 +34,7 @@ public class ArrayOps {
         int second_max = Math.min(array[0], array[1]);
 
         for (int i = 1; i < array.length; i++) {
-            if (array[i] > max){
+            if (array[i] >= max){
                 second_max = max;
                 max = array[i];
             }
