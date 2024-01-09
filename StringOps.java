@@ -31,7 +31,7 @@ public class StringOps {
 
 
         System.out.println(camelCase("     Intro to coMPUter sCIEncE     "));
-
+        System.out.println(capVowelsLowRest("One two tHRee world"));
 
     }
 
@@ -39,6 +39,7 @@ public class StringOps {
         // Write your code here:
         String opposite = "";
         String voules = "aeoui";
+        String capital_voules = "AOUEI";
         for (int i = 0; i < string.length(); i++) {
             char current = string.charAt(i);
             if ((current >= 'a' && current <= 'z') || (current >= 'A' && current <= 'Z')){
@@ -47,7 +48,7 @@ public class StringOps {
                         current -= 32;
                    }
                 } else {
-                    if (current >= 'A' && current <= 'Z'){
+                    if (current >= 'A' && current <= 'Z' && capital_voules.indexOf(current) == -1){
                         current += 32;
                     }
                 }
