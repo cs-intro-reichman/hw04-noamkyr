@@ -1,9 +1,9 @@
 public class ArrayOps {
     public static void main(String[] args) {
         int[] arr2 = new int[] {7, 5, 4, 3, -12};
-        int[] arr1 = new int[]{2,8,3,7,8};
+        int[] arr1 = new int[]{1,2,3};
 
-        //System.out.println(findMissingInt(intArray));
+        System.out.println(findMissingInt(arr1));
         System.out.println(secondMaxValue(arr1));
 
         // System.out.println(containsTheSameElements(arr1, arr2));
@@ -14,7 +14,7 @@ public class ArrayOps {
     public static int findMissingInt (int [] array) {
         boolean has_missing_found = false;
         int missing_val = -1;
-        for (int i = 1; i <= array.length && !has_missing_found; i++) {
+        for (int i = 0; i <= array.length && !has_missing_found; i++) {
             int j = 0;
             while(j < array.length && array[j] != i) {
                 j++;
