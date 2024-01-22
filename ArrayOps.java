@@ -33,6 +33,8 @@ public class ArrayOps {
             // if finished searching and the value wasnt found
             if (j == array.length) {
 
+                // #feedback - you can return the missing value (i) here directly.
+
                 // update that the value was found
                 has_missing_found = true;
 
@@ -100,6 +102,7 @@ public class ArrayOps {
 
         }
 
+        // #feedback - you can extract the for loop to a helper funciton, instead of writing it twice.
 
         // check if every value of the second array is at the first one
         for (int i = 0; i < array2.length; i++) {
@@ -141,7 +144,7 @@ public class ArrayOps {
 
         // check if the array should be increasing or decreasing by the first 2 elements
         // set the value if increasing or decreasing
-        boolean is_increasing = true;
+        boolean is_increasing = true; // #feedback - camelCase is more used in Java - isIncreasing.
         if (array[1] < array[0]) {
             is_increasing = false;
         }
@@ -152,11 +155,13 @@ public class ArrayOps {
             // when it isnt increasing
             if (array[i] < array[i-1]){
                 // not sorted
+                // #feedback - note that you would return false here without checking for the decreasing array.
                 return false;
             }
         }
 
         // the array is increasingly sorted
+        // #feedback - no need to check "== true" you can just check the value of the boolean variable - "if(isIncreasing)".
         if (is_increasing == true) {
             return true;
         }
