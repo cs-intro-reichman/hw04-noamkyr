@@ -109,6 +109,7 @@ public class StringOps {
                 } else {
 
                     // make all the letter small in the first word
+                    // #feedback - looks like checking countWord == 1 is not needed since you have the same "if" here and below.
                     if (count_word == 1){
                         if (current >= 'A' && current <= 'Z'){
                             current += 32;
